@@ -1,7 +1,7 @@
 {
     "name": "c0de8/phalcon3-monolog",
     "type": "library",
-    "description": "Phalcon 3 logger adapter for MonoLog",
+    "description": "Phalcon 3 logger adapter for Monolog",
     "keywords": ["log", "logger", "logging", "phalcon", "adapter"],
     "homepage": "https://github.com/c0de8/phalcon3-monolog",
     "license": "MIT",
