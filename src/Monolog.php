@@ -51,15 +51,7 @@ class Monolog extends Adapter
      */
     public function setFormatter(FormatterInterface $formatter)
     {
-
-    }
-
-    /**
-     *
-     */
-    public function getFormatter()
-    {
-
+        return $this;
     }
 
     /**
@@ -70,7 +62,7 @@ class Monolog extends Adapter
      */
     public function setLogLevel($level = PhalconLogger::INFO)
     {
-
+        return $this;
     }
 
     /**
