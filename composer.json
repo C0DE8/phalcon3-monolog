@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Phalcon 3 logger adapter for MonoLog",
     "keywords": ["log", "logger", "logging", "phalcon", "adapter"],
-    "homepage": "https://github.com/c0de8/phalcon-monolog",
+    "homepage": "https://github.com/c0de8/phalcon3-monolog",
     "license": "MIT",
     "authors": [
         {
@@ -14,9 +14,9 @@
         }
     ],
     "support": {
-        "source": "https://github.com/C0DE8/phalcon3-debug-widget",
-        "issues": "https://github.com/C0DE8/phalcon3-debug-widget/issues",
-        "wiki":   "https://github.com/C0DE8/phalcon3-debug-widget/wiki"
+        "source": "https://github.com/C0DE8/phalcon3-monolog",
+        "issues": "https://github.com/C0DE8/phalcon3-monolog/issues",
+        "wiki":   "https://github.com/C0DE8/phalcon3-monolog/wiki"
     },
     "require": {
         "php": ">=5.5.0",
