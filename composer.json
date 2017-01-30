@@ -1,5 +1,5 @@
 {
-    "name": "c0de8/phalcon-monolog",
+    "name": "c0de8/phalcon3-monolog",
     "type": "library",
     "description": "Phalcon 3 logger adapter for MonoLog",
     "keywords": ["log", "logger", "logging", "phalcon", "adapter"],
