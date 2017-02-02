@@ -8,9 +8,14 @@
 
 The phalcon 3.x.x logger adapter for monolog.
 
-Changelog:
+## Changelog:
 =====
+
+### 0.1.0
+- add unit tests
+- refactor (remove unneeded methods, add more comments)
+
+### initial
 - forked from https://github.com/khoinguyen/phalcon-monolog
 - remove logstash class
 - rename and optimize phalcon monolog adapter
- 

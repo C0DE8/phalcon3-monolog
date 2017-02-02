@@ -20,12 +20,18 @@
     },
     "require": {
         "php": ">=5.5.0",
-        "ext-phalcon": ">= 3.0.0"
+        "ext-phalcon": ">= 3.0.0",
+        "monolog/monolog": "^1.22"
     },
+    "require-dev": {
+        "phpunit/phpunit": ">=5.7.0"
+    },
+
     "minimum-stability": "dev",
     "autoload": {
-        "psr-4": {
-            "C0DE8\\Phalcon\\Logger\\Adapter\\Monolog\\": "src/"
-        }
+        "psr-4": {"C0DE8\\": "src/C0DE8"}
+    },
+    "autoload-dev": {
+        "psr-4": {"C0DE8\\": "tests/C0DE8"}
     }
 }
