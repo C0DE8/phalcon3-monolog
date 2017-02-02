@@ -7,6 +7,7 @@ use Monolog\Logger as MonologLogger;
 use Phalcon\Logger as PhalconLogger;
 use Phalcon\Logger\Adapter;
 use Phalcon\Logger\FormatterInterface;
+use Phalcon\Logger\Formatter\Line as LineFormatter;
 
 /**
  * Class Monolog
@@ -56,8 +57,10 @@ class Monolog extends Adapter
      */
     public function getFormatter() : FormatterInterface
     {
-        // no formatter needed, work will done in monolog
-        // should not be called, because no monolog formatter available
+        if (!$this->_formatter) {
+            $this->_formatter = new LineFormatter();
+        }
+        return $this->_formatter;
     }
 
     /**
@@ -65,21 +68,22 @@ class Monolog extends Adapter
      */
     public function close()
     {
-        // nothing to do here
+        // nothing to do here, will return null (implicitly)
     }
 
     /**
-     * Logs messages to the internal logger. Appends logs to the logger
+     * Logs messages to the internal logger. Appends logs to the monolog logger
      *
      * @param string $message
      * @param int    $type
      * @param int    $time
      * @param array  $context
-     * @return \Phalcon\Logger\AdapterInterface
+     * @return Monolog
      */
-    public function logInternal(string $message, int $type, int $time, array $context = array())
+    public function logInternal(string $message, int $type, int $time, array $context = array()) : Monolog
     {
         $this->_monolog->addRecord($this->levelMapping[$type], $message, $context);
+        return $this;
     }
 
 }
