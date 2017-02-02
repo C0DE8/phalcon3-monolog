@@ -24,7 +24,7 @@ class Monolog extends Adapter
     /**
      * @var array
      */
-    protected $levelMapping = array(
+    protected $levelMapping = [
         PhalconLogger::DEBUG    => MonologLogger::DEBUG,
         PhalconLogger::INFO     => MonologLogger::INFO,
         PhalconLogger::NOTICE   => MonologLogger::NOTICE,
@@ -32,7 +32,7 @@ class Monolog extends Adapter
         PhalconLogger::ERROR    => MonologLogger::ERROR,
         PhalconLogger::ALERT    => MonologLogger::ALERT,
         PhalconLogger::EMERGENCY=> MonologLogger::EMERGENCY
-    );
+    ];
 
 
     /**
@@ -80,7 +80,11 @@ class Monolog extends Adapter
      * @param array  $context
      * @return Monolog
      */
-    public function logInternal(string $message, int $type, int $time, array $context = array()) : Monolog
+    public function logInternal(
+        string $message,
+        int    $type,
+        int    $time,
+        array  $context = null) : Monolog
     {
         $this->_monolog->addRecord($this->levelMapping[$type], $message, $context);
         return $this;
