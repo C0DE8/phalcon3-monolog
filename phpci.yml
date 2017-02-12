@@ -1,0 +1,78 @@
+build_settings:
+    clone_depth: 1 # depth of 1 is a shallow clone, remove this line to clone entire repo
+    ignore:
+        - "vendor"
+        - "tests"
+
+    composer:
+        action: "install"
+
+test:
+#    codeception:
+#        config: "codeception.yml"
+#        path: "tests/_output/"
+#        args: "--xml"
+     php_unit:
+        config:
+            - "phpunit.xml.dist"
+        directory:
+            - "tests/"
+        run_from: "phpunit/"
+        coverage: "tests/logs/coverage"
+    php_mess_detector:
+        allow_failures: true
+        rules:
+            - "cleancode"
+            - "controversial"
+            - "codesize"
+            - "design"
+            - "naming"
+            - "unusedcode"
+        ignore:
+            - "doc"
+            - "database"
+            - "vendor"
+            - "var"
+    php_code_sniffer:
+        path: "."
+        standard: "PSR2"
+        encoding: "utf-8"
+        ignore:
+            - "doc"
+            - "database"
+            - "vendor"
+            - "var"
+        allowed_warnings: -1
+    php_cpd:
+        standard: "PSR2"
+#        allow_failures: true
+    php_docblock_checker:
+        allowed_warnings: -1 # Allow unlimited warnings for now.
+        ignore:
+            - "doc"
+            - "database"
+            - "vendor"
+            - "var"
+#    php_loc:
+#        directory: "."
+#        ignore:
+#            - "doc"
+#            - "database"
+#            - "vendor"
+#            - "var"
+
+#    grunt: #   The JavaScript Task Runner
+#        task: "build"
+
+#success:
+#    deployer:
+#        webhook_url: "https://deployer.example.com/deploy/QZaF1bMIUqbMFTmKDmgytUuykRN0cjCgW9SooTnwkIGETAYhDTTYoR8C431t"
+#        reason: "PHPCI Build #%BUILD% - %COMMIT_MESSAGE%"
+#        update_only: true
+
+#complete:
+#    mysql:
+#        host: "localhost"
+#        user: "root"
+#        pass: ""
+#        - "DROP DATABASE IF EXISTS test;"
