@@ -4,6 +4,8 @@ build_settings:
         - "vendor"
         - "tests"
 
+setup:
+setup:
     composer:
         action: "install"
 
