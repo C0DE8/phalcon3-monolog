@@ -49,10 +49,10 @@ test:
         ignore:
             - "vendor"
             - "tests"
-#    php_loc:
-#        directory: "."
-#        ignore:
-#            - "vendor"
+    php_loc:
+        directory: "."
+        ignore:
+            - "vendor"
 
 #    grunt: #   The JavaScript Task Runner
 #        task: "build"
