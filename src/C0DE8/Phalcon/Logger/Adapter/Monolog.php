@@ -84,10 +84,9 @@ class Monolog extends Adapter
         string $message,
         int    $type,
         int    $time,
-        array  $context = null) : Monolog
-    {
+        array  $context = null
+    ) : Monolog {
         $this->_monolog->addRecord($this->levelMapping[$type], $message, $context);
         return $this;
     }
-
 }
