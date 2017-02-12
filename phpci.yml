@@ -17,7 +17,7 @@ test:
             - "phpunit.xml.dist"
         directory:
             - "tests/"
-        run_from: "phpunit/"
+#        run_from: "phpunit/"
         coverage: "tests/logs/coverage"
     php_mess_detector:
         allow_failures: true
@@ -37,6 +37,7 @@ test:
         encoding: "utf-8"
         ignore:
             - "vendor"
+            - "tests"
         allowed_warnings: -1
     php_cpd:
         standard: "PSR2"
@@ -45,6 +46,7 @@ test:
         allowed_warnings: -1 # Allow unlimited warnings for now.
         ignore:
             - "vendor"
+            - "tests"
 #    php_loc:
 #        directory: "."
 #        ignore:
