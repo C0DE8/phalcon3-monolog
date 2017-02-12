@@ -12,7 +12,7 @@ test:
 #        config: "codeception.yml"
 #        path: "tests/_output/"
 #        args: "--xml"
-     php_unit:
+    php_unit:
         config:
             - "phpunit.xml.dist"
         directory:
