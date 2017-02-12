@@ -30,6 +30,7 @@ test:
             - "unusedcode"
         ignore:
             - "vendor"
+            - "tests"
     php_code_sniffer:
         path: "."
         standard: "PSR2"

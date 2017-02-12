@@ -74,10 +74,10 @@ class Monolog extends Adapter
     /**
      * Logs messages to the internal logger. Appends logs to the monolog logger
      *
-     * @param string $message
-     * @param int    $type
-     * @param int    $time
-     * @param array  $context
+     * @param  string  $message
+     * @param  int     $type
+     * @param  int     $time
+     * @param  array   $context
      * @return Monolog
      */
     public function logInternal(
@@ -86,7 +86,12 @@ class Monolog extends Adapter
         int    $time,
         array  $context = null) : Monolog
     {
-        $this->_monolog->addRecord($this->levelMapping[$type], $message, $context);
+        $context = array_merge($context, ['time' => $time]);
+        $this->_monolog->addRecord(
+            $this->levelMapping[$type],
+            $message,
+            $context
+        );
         return $this;
     }
 
