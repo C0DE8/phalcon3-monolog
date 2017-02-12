@@ -25,7 +25,7 @@ test:
         allow_failures: true
         rules:
             - "cleancode"
-            - "controversial"
+            - "controversial"  #allow-underscore: true
             - "codesize"
             - "design"
             - "naming"
